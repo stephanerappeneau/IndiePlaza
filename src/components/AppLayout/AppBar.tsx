@@ -4,7 +4,7 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import { IconButton } from '@/components/AppLayout/IconButton';
 
-const BLOG_URL = 'https://medium.com/indie-plaza';
+const BLOG_URL = 'https://stephanerapno.medium.com';
 const ABOUT_PATH = '/about';
 const PUBLISHER_QUEST_PATH = '/tools/publisher-quest';
 

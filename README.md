@@ -14,12 +14,13 @@ No environment variables. No backend. One click.
 
 - **Vercel:** Import your fork at [vercel.com/new](https://vercel.com/new)
 - **Netlify:** Import your fork at [app.netlify.com/start](https://app.netlify.com/start)
+
 ---
 
 ## Run locally
 
 ```bash
-git clone https://github.com/ACCOUNT/REPO.git
+git clone https://github.com/stephanerappeneau/IndiePlaza
 cd REPO
 npm install
 npm run dev
