@@ -80,7 +80,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-2">
                   <a
-                    href={'mailto:contact@indie-plaza.eu'}
+                    href={'mailto:stephane.rappeneau@gmail.com'}
                     className="text-base hover:underline cursor-pointer hover:text-gray-500"
                   >
                     stephane.rappeneau@gmail.com
