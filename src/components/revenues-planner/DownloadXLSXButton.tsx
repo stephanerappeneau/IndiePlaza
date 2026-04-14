@@ -30,7 +30,7 @@ const DownloadXLSXButton = ({
   const handleDownloadCSV = async () => {
     setLoading(true);
     try {
-      const xlsx = await import('xlsx');
+      const ExcelJS = await import('exceljs');
       const launchDate = new Date(formValues.launchDate);
       const weeklyData = await calculateRevenues(
         formValues,
@@ -41,55 +41,35 @@ const DownloadXLSXButton = ({
       const weeklyCSVContent = generateCSV(weeklyData, launchDate);
       const monthlyCSVContent = generateMonthlyCSV(monthlyData, launchDate);
 
-      const wb = xlsx.utils.book_new();
-      const weeklySheet = xlsx.utils.aoa_to_sheet([]);
-      const monthlySheet = xlsx.utils.aoa_to_sheet([]);
+      const wb = new ExcelJS.Workbook();
 
-      xlsx.utils.sheet_add_aoa(weeklySheet, weeklyCSVContent);
-      xlsx.utils.sheet_add_aoa(monthlySheet, monthlyCSVContent);
-
-      weeklySheet['!cols'] = Array(weeklyCSVContent[0].length).fill({
-        wch: 20,
-      });
-      monthlySheet['!cols'] = Array(monthlyCSVContent[0].length).fill({
-        wch: 20,
-      });
-
-      const currencyFormat = '#,##0';
-
-      weeklyCSVContent.slice(1).forEach((row, rowIndex) => {
-        row.forEach((value, colIndex) => {
-          const cellAddress = xlsx.utils.encode_cell({
-            r: rowIndex + 1,
-            c: colIndex,
+      const addSheet = (name: string, data: (string | number)[][]) => {
+        const ws = wb.addWorksheet(name);
+        ws.columns = data[0].map(() => ({ width: 20 }));
+        ws.addRows(data);
+        ws.eachRow((row, rowNumber) => {
+          if (rowNumber === 1) return;
+          row.eachCell((cell) => {
+            if (typeof cell.value === 'number') {
+              cell.numFmt = '#,##0';
+            }
           });
-          if (typeof value === 'number') {
-            if (!weeklySheet[cellAddress])
-              weeklySheet[cellAddress] = { v: value };
-            weeklySheet[cellAddress].t = 'n';
-            weeklySheet[cellAddress].z = currencyFormat;
-          }
         });
-      });
+      };
 
-      monthlyCSVContent.slice(1).forEach((row, rowIndex) => {
-        row.forEach((value, colIndex) => {
-          const cellAddress = xlsx.utils.encode_cell({
-            r: rowIndex + 1,
-            c: colIndex,
-          });
-          if (typeof value === 'number') {
-            if (!monthlySheet[cellAddress])
-              monthlySheet[cellAddress] = { v: value };
-            monthlySheet[cellAddress].t = 'n';
-            monthlySheet[cellAddress].z = currencyFormat;
-          }
-        });
-      });
+      addSheet('Weekly Data', weeklyCSVContent);
+      addSheet('Monthly Data', monthlyCSVContent);
 
-      xlsx.utils.book_append_sheet(wb, weeklySheet, 'Weekly Data');
-      xlsx.utils.book_append_sheet(wb, monthlySheet, 'Monthly Data');
-      xlsx.writeFile(wb, 'revenue_data.xlsx');
+      const buffer = await wb.xlsx.writeBuffer();
+      const blob = new Blob([buffer], {
+        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'revenue_data.xlsx';
+      a.click();
+      URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Error generating revenue data:', error);
     } finally {
