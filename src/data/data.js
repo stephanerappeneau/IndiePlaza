@@ -3,11 +3,11 @@ export default {
     footerList: {
       website: [
         { title: 'Publisher Quest', src: '/tools/publisher-quest' },
-        { title: 'Blog', src: 'https://medium.com/indie-plaza' },
+        { title: 'Blog', src: 'https://stephanerapno.medium.com/' },
         { title: 'About', src: '/about' },
         {
           title: 'Github open source repo',
-          src: 'https://github.com/indie-plaza',
+          src: 'https://github.com/stephanerappeneau/IndiePlaza',
         },
       ],
     },
