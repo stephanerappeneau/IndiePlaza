@@ -12,7 +12,6 @@ No environment variables. No backend. One click.
 
 - **Vercel:** Import your fork at [vercel.com/new](https://vercel.com/new)
 - **Netlify:** Import your fork at [app.netlify.com/start](https://app.netlify.com/start)
-
 ---
 
 ## Run locally
