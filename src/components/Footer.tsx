@@ -83,7 +83,7 @@ const Footer = () => {
                     href={'mailto:contact@indie-plaza.eu'}
                     className="text-base hover:underline cursor-pointer hover:text-gray-500"
                   >
-                    contact@indie-plaza.eu
+                    stephane.rappeneau@gmail.com
                   </a>
                 </li>
               </ul>
