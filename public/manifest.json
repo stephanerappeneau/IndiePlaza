@@ -1,0 +1,30 @@
+{
+  "name": "LD | Indie plaza Where Ideas Meet Opportunity",
+  "short_name": "Indie-plaza",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "description": "Indie Plaza Project is a one-stop shop to support european indies in their financing quest. Access our database of hundreds of financing solutions and experts in video games studio creation and funding. The Indie Plaza project has been granted funding by the Creative Europe Business Innovation Program",
+  "icons": [
+    {
+      "src": "/icon-pwa-ios.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-pwa.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#000000",
+  "orientation": "portrait-primary"
+}

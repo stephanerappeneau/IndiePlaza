@@ -1,0 +1,159 @@
+{
+  "buzzCurvePresets": [
+    {
+      "steepnessOfDecline": -70,
+      "value": "Successful single player Game w/ no live ops",
+      "label": "Successful single player Game w/ no live ops",
+      "weeksOfInflection": 36
+    },
+    {
+      "steepnessOfDecline": -60,
+      "label": "Successful single player Game w/ DLC",
+      "value": "Successful single player Game w/ DLC",
+      "weeksOfInflection": 104
+    },
+    {
+      "label": "Failed single player Game",
+      "value": "Failed single player Game",
+      "weeksOfInflection": 12,
+      "steepnessOfDecline": -90
+    },
+    {
+      "steepnessOfDecline": 10,
+      "weeksOfInflection": 156,
+      "value": "Successful Only game or GaaS",
+      "label": "Successful Online game or GaaS"
+    },
+    {
+      "steepnessOfDecline": -20,
+      "value": "Failed Online game or GaaS",
+      "label": "Failed Online game or GaaS",
+      "weeksOfInflection": 52
+    },
+    {
+      "weeksOfInflection": 104,
+      "label": "Late success game",
+      "value": "Late success game",
+      "steepnessOfDecline": 60
+    }
+  ],
+  "wishlistPresets": [
+    {
+      "viralityMultiplierDueToDiscounting": 2,
+      "grossWishlistIncreasePerWeek": -1000,
+      "label": "Small game or no marketing",
+      "value": "Small game or no marketing"
+    },
+    {
+      "label": "Small evergreen game or sustainable marketing",
+      "value": "Small evergreen game or sustainable marketing",
+      "viralityMultiplierDueToDiscounting": 10,
+      "grossWishlistIncreasePerWeek": 2000
+    },
+    {
+      "viralityMultiplierDueToDiscounting": 2,
+      "grossWishlistIncreasePerWeek": -10000,
+      "value": "Big game or no marketing",
+      "label": "Big game or no marketing"
+    },
+    {
+      "value": "Big evergreen game or sustainable marketing",
+      "label": "Big evergreen game or sustainable marketing",
+      "viralityMultiplierDueToDiscounting": 10,
+      "grossWishlistIncreasePerWeek": 1000
+    }
+  ],
+  "conversionRateTable": {
+    "0": "0.01",
+    "10": "0.02",
+    "20": "0.04",
+    "30": "0.05",
+    "40": "0.06",
+    "50": "0.8",
+    "60": "0.1",
+    "70": "0.12",
+    "80": "0.14",
+    "90": "0.15"
+  },
+  "playerReviews": [
+    {
+      "value": "100",
+      "label": "Overwhelmingly Positive"
+    },
+    {
+      "value": "80",
+      "label": "Very Positive"
+    },
+    {
+      "value": "60",
+      "label": "Positive"
+    },
+    {
+      "value": "50",
+      "label": "Mostly Positive"
+    },
+    {
+      "value": "40",
+      "label": "Mixed"
+    },
+    {
+      "value": "30",
+      "label": "Mostly Negative"
+    },
+    {
+      "value": "15",
+      "label": "Negative"
+    },
+    {
+      "value": "5",
+      "label": "Overwhelmingly Negative"
+    }
+  ],
+  "discountStrategyPresets": [
+    {
+      "label": "Light & frequent discount",
+      "minDiscount": 10,
+      "maxDiscount": 30,
+      "durationOfDiscountInWeeks": 2,
+      "value": "Light & frequent discount",
+      "numberOfWeeksWithoutDiscount": 6,
+      "yearForMaxDiscount": 3
+    },
+    {
+      "label": "Light & infrequent discount",
+      "maxDiscount": 30,
+      "durationOfDiscountInWeeks": 1,
+      "minDiscount": 10,
+      "value": "Light & infrequent discount",
+      "yearForMaxDiscount": 3,
+      "numberOfWeeksWithoutDiscount": 16
+    },
+    {
+      "label": "Heavy & frequent discount",
+      "minDiscount": 10,
+      "durationOfDiscountInWeeks": 2,
+      "maxDiscount": 90,
+      "value": "Heavy & frequent discount",
+      "yearForMaxDiscount": 3,
+      "numberOfWeeksWithoutDiscount": 6
+    },
+    {
+      "value": "Heavy & infrequent discount",
+      "numberOfWeeksWithoutDiscount": 16,
+      "yearForMaxDiscount": 3,
+      "label": "Heavy & infrequent discount",
+      "minDiscount": 10,
+      "maxDiscount": 90,
+      "durationOfDiscountInWeeks": 1
+    },
+    {
+      "value": "No discount",
+      "numberOfWeeksWithoutDiscount": 51,
+      "yearForMaxDiscount": 3,
+      "label": "No discount",
+      "durationOfDiscountInWeeks": 1,
+      "maxDiscount": 10,
+      "minDiscount": 0
+    }
+  ]
+}
