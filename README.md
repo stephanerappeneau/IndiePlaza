@@ -10,10 +10,8 @@ A free, open-source revenue simulation tool for indie game studios. Model your g
 
 No environment variables. No backend. One click.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ACCOUNT/REPO)
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ACCOUNT/REPO)
-
+- **Vercel:** Import your fork at [vercel.com/new](https://vercel.com/new)
+- **Netlify:** Import your fork at [app.netlify.com/start](https://app.netlify.com/start)
 ---
 
 ## Run locally
