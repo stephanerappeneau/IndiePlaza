@@ -1,5 +1,7 @@
 # Indie Plaza — Revenue Planner
 
+![Indie Plaza Cover](public/assets/cover.png)
+
 A free, open-source revenue simulation tool for indie game studios. Model your game launch, wishlist conversion, discount strategy, and net earnings — no account required, no data sent anywhere.
 
 **Live demo:** [indie-plaza.eu](https://indie-plaza.eu)
